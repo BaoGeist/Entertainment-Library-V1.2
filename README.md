@@ -1,5 +1,5 @@
 # Entertainment-Library-V1.1
-Created for the sole purposes of tracking the animes, movies, shows, books and whatnot using basic text file and excel interactions (as well as having some fun). Version with GUI will be created in the future.
+Created for the sole purposes of tracking the animes, movies, shows, books and whatnot using basic text file and excel interactions (as well as having some fun).
 
 Features as of 09.05.2021:
 
