@@ -15,7 +15,7 @@ Display the items to watch
 Note 1 - To start using this application:
 - Download the entire repository as a zip file and unzip it
 - Visit each of the text files and replace the current titles with whatever you'd like (minimum 2)
-- Save and run
+- Save and run **Library.exe**
 
 Note 2 - To reset the application, following the below steps:
 - Clear all text files, and add 2 items each to them. Finish off by leaving one extra \n (e.g. wipe Movie.txt clean and add Spiderman 1\n Spiderman 2\n\n)
