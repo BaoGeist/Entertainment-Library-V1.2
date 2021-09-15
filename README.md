@@ -3,7 +3,7 @@ Created for the sole purposes of tracking the animes, movies, shows, books and w
 
 Features as of 09.05.2021:
 
-Display the items to watch
+- Display the items to watch
 - Adding items to watch
 - "Redeeming" items after being finished
 - Statistics on the watched times
