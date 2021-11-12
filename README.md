@@ -1,7 +1,7 @@
-# Entertainment-Library-V1.1
+# Entertainment-Library-V1.2
 Created for the sole purposes of tracking the animes, movies, shows, books and whatnot using basic text file and excel interactions (as well as having some fun).
 
-Features as of 09.05.2021:
+Features as of 11.12.2021:
 
 - Display the items to watch
 - Adding items to watch
@@ -11,6 +11,9 @@ Features as of 09.05.2021:
 - Displaying all Finished items
 - Exporting an excel workbook with the items that are on the to watch list
 - Creating a bar graph of your media consumption
+- Creating a line graph of your media consumption over time
+- Use of a settings
+- Change of the colour of the UI
 
 Note 1 - To start using this application:
 - Download the entire repository as a zip file and unzip it
