@@ -6,6 +6,7 @@ import matplotlib.pyplot as plt
 from PIL import ImageTk, Image
 import numpy as np
 import webbrowser, re, random, time, pyperclip, export
+import smtplib
 
 #global variables
 global colour
@@ -180,7 +181,7 @@ def functionRandom():
     if("Show" in fileName or "Movie" in fileName):
         webbrowser.open('https://lookmovie.io/', new=1)
     elif("Anime" in fileName):
-        webbrowser.open("https://9anime.ru/", new=1)
+        webbrowser.open("https://9anime.se/", new=1)
     lblExtra.config(text=output)
 
 ##function that lets you access the statistics of your consumption so far
@@ -333,10 +334,34 @@ def functionColour():
     root.destroy
     f.close()    
 
+##function that emails your Entertainment Library to yourself
+def functionEmail():
+    strSend = 'Subject: Entertainment Library List\n\n'
+    ###getting email and password from entry
+    strEntry = entEnter.get()
+    entEnter.delete(0, tk.END)
+    lstEntry = strEntry.split()
+    email, password = lstEntry[0], lstEntry[1]
+    lblExtra.config(text = 'Emailed Entertainment Library List to and from %s' %email)
+    ###getting textfile information
+    for file in ['Movie', 'Anime', 'Show', 'Book']:
+        strSend += '~~' + file + '~~\n'
+        f = open(file+'.txt', 'rt')
+        for line in f:
+            strSend += line
+        strSend += '\n'
+    ###sending email
+    conn = smtplib.SMTP('smtp-mail.outlook.com', 587)
+    conn.ehlo()
+    conn.starttls()
+    conn.login(email, password)
+    conn.sendmail(email, email, strSend)
+    conn.quit()
+
 #main code
 ##GUI creation
 root = tk.Tk()
-root.title("Entertaiment Library")
+root.title("Entertainment Library")
 
 ##left frame creation
 frmLeft = tk.Frame(master = root, relief = "raised", borderwidth = 5,bg = '#B298C4')
@@ -363,19 +388,21 @@ btnSta = tk.Button(frmLeft, text = 'Statistics', bg = '#BC65CC', fg = 'white', c
 btnSta.grid(row=6, column = 0, pady = 5, padx = 5, sticky = 'nesw')
 btnFin = tk.Button(frmLeft, text = 'Finished', bg = '#BC65CC', fg = 'white', command = functionFinished)
 btnFin.grid(row=7, column = 0, pady = 5, padx = 5, sticky = 'nesw')
+btnEma = tk.Button(frmLeft, text = 'Email', bg = '#BC65CC', fg = 'white', command = functionEmail)
+btnEma.grid(row=8, column = 0, pady = 5, padx = 5, sticky = 'nesw')
 btnExp = tk.Button(frmLeft, text = 'Export Excel', bg = '#BC65CC', fg = 'white', command=functionExport)
-btnExp.grid(row=8, column = 0, pady = 5, padx = 5, sticky = 'nesw')
+btnExp.grid(row=9, column = 0, pady = 5, padx = 5, sticky = 'nesw')
 btnBar = tk.Button(frmLeft, text = 'Figure - Bar', bg = '#BC65CC', fg = 'white', command=functionBar)
-btnBar.grid(row=9, column = 0, pady = 5, padx = 5, sticky = 'nsew')
+btnBar.grid(row=10, column = 0, pady = 5, padx = 5, sticky = 'nsew')
 btnLine = tk.Button(frmLeft, text = 'Figure - Line', bg = '#BC65CC', fg = 'white', command=functionLine)
-btnLine.grid(row=10, column = 0, pady = 5, padx = 5, sticky = 'nsew')
+btnLine.grid(row=11, column = 0, pady = 5, padx = 5, sticky = 'nsew')
 btnQui = tk.Button(frmLeft, text = 'Quit', bg = '#BC65CC', fg = 'white', command=root.destroy)
-btnQui.grid(row=11, column = 0, pady = 5, padx = 5, sticky = 'nesw')
+btnQui.grid(row=12, column = 0, pady = 5, padx = 5, sticky = 'nesw')
 ##settings
 lblSettings = tk.Label(frmLeft, text = 'Settings', bg = '#A265CC', fg = 'white', font=("Helvetica",12,"bold"))
-lblSettings.grid(row=12, column = 0, pady=5, padx=5, sticky= 'nesw', ipady = 10)
+lblSettings.grid(row=13, column = 0, pady=5, padx=5, sticky= 'nesw', ipady = 10)
 btnColor = tk.Button(frmLeft, text = 'Change Colour', bg = '#BC65CC', fg = 'white', command = functionColour)
-btnColor.grid(row=13, column = 0, pady = 5, padx = 5, sticky = 'nesw', ipady = 10)
+btnColor.grid(row=14, column = 0, pady = 5, padx = 5, sticky = 'nesw', ipady = 10)
 
 ##middle frame creation
 frmMiddle = tk.Frame(master = root, relief = "raised", borderwidth = 5,bg = '#B298C4')
