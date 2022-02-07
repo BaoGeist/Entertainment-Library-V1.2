@@ -1,0 +1,62 @@
+S	Wandavision	2021-04-28
+A	Black Clover	2021-05-13
+A	Bungou Stray Dogs	2021-05-17
+M	Grave of Fireflies	2021-05-20
+M	Luca	2021-05-21
+M	Train to Busan	2021-05-24
+M	Nobody	2021-05-25
+M	Black Widow	2021-07-24
+A	Jujutsu Kaisen	2021-07-30
+M	Hitman's Wife's Bodyguard	2021-07-17
+M	Fast and Furious 9    2021-07-22
+M	The Last Unicorn	2021-07-23
+M	Batman The Long Halloween	2021-07-27
+M	Jungle Cruise	2021-08-04
+M	Dunkirk	2021-08-04
+M	Venom	2021-08-04
+B	Shadow of Doubt	2021-08-07
+M	The Suicide Squad 2	2021-08-12
+S	The Bad Batch	2021-08-21
+M	21 Jump Street	2021-08-21
+M	22 Jump Street	2021-08-21
+M	The Green Knight	2021-08-21
+M	King of Staten Island	2021-08-23
+M	Snake Eyes	2021-08-24
+A	Scissors Seven	2021-08-25
+M	Flu	2021-08-28
+B	Ahsoka	2021-09-02
+S	Rick and Morty	2021-09-08
+S	Marvel What If	2021-10-10
+S	Squid Game	2021-10-10
+M	Free Guys	2021-10-10
+S	Star Wars Visions	2021-10-17
+M	Candyman	2021-11-01
+M	Sinbad	2021-11-06
+M	Shang Chi	2021-11-13
+M	Venom Let There Be Carnage	2021-11-20
+M	Red Notice	2021-12-03
+M	No Time To Die	2021-12-06
+M	Mune Guardian of the Moon	2021-12-18
+A	Assassination Classroom	2021-12-19
+M	No Way Home	2021-12-22
+M	Encanto	2021-12-27
+M	Hello World (Anime)	2021-12-27
+A	Kyoukai no Kanata (Beyound the Boundary)	2021-12-28
+A	On Your Mark	2021-12-28
+A	Tsurezure Children	2021-12-29
+A	Ghost Stories (English Dub)	2021-12-29
+A	Violet Evergarden	2021-12-30
+A	Tower of God	2021-12-31
+B	Iron Widow	2022-01-04
+A	Horimiya	2022-01-07
+M	Guns Akimbo	2022-01-08
+A	Tenkuu Shinpan	2022-01-10
+A	Neon Genesis Evangelion	2022-01-14
+M	Eternals	2022-01-15
+A	The Testament of Sister New Devil	2022-01-17
+A	My Cultivator Girlfriend (C)	2022-01-18
+A	Akame ga Kill!	2022-01-22
+B	Demon Slayer (M)	2022-01-30
+B	Giyu Tomioka: Gaiden	2022-02-01
+B	Kyojuro Rengoku: Gaiden	2022-02-01
+M	The Harder They Fall	2022-02-04
