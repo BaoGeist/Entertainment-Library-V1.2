@@ -1,7 +1,7 @@
 # Entertainment-Library-V1.2
 Created for the sole purposes of tracking the animes, movies, shows, books and whatnot using basic text file and excel interactions (as well as having some fun).
 
-Features as of 02.06.2022:
+Features as of 06.05.2022:
 
 - Display the items to watch
 - Adding items to watch
@@ -16,6 +16,7 @@ Features as of 02.06.2022:
 - Use of a settings
 - Change of the colour of the UI
 - Email list of Media to oneself through Outlook
+- Shortcut keys
 
 Note 1 - To start using this application:
 - Download the entire repository as a zip file and unzip it
