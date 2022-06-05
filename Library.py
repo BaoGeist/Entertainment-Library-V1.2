@@ -27,85 +27,45 @@ def functionSettings():
     if ((colour1 in colViable) and (colour2 in colViable)) or ((m) and (n)):
         for wid in [lblCat, lblAll, lblSettings, lblAct, lblCatR]:
             wid.config(bg=colour1)
-        for wid in [
-            btnMov,
-            btnAni,
-            btnSho,
-            btnBoo,
-            btnSta,
-            btnFin,
-            btnExp,
-            btnBar,
-            btnQui,
-            btnColor,
-            btnAdd,
-            btnRed,
-            btnRan,
-            lblDisplay,
-            lblExtra,
-        ]:
+        for wid in [btnMov,btnAni,btnSho,btnBoo,btnSta,btnFin,btnExp,btnBar,btnQui,btnColor,btnAdd,btnRed,btnRan,lblDisplay,lblExtra,]:
             wid.config(bg=colour2)
     elif colour1 == "default" or colour2 == "default":
         for wid in [lblCat, lblAll, lblSettings, lblAct, lblCatR]:
             wid.config(bg="#A265CC")
-        for wid in [
-            btnMov,
-            btnAni,
-            btnSho,
-            btnBoo,
-            btnSta,
-            btnFin,
-            btnExp,
-            btnBar,
-            btnQui,
-            btnColor,
-            btnAdd,
-            btnRed,
-            btnRan,
-            lblDisplay,
-            lblExtra,
-        ]:
+        for wid in [btnMov,btnAni,btnSho,btnBoo,btnSta,btnFin,btnExp,btnBar,btnQui,btnColor,btnAdd,btnRed,btnRan,lblDisplay,lblExtra,]:
             wid.config(bg="#BC65CC")
     f.close()
 
 
 ##functions that choose the type of media you will be browsing
-def functionChooseMovie():
+def functionChooseMovie(e = 1):
     lblCatR.config(text="Movies")
-    btnAdd.config(state=tk.NORMAL)
-    btnRed.config(state=tk.NORMAL)
-    btnRem.config(state=tk.NORMAL)
-    btnRan.config(state=tk.NORMAL)
+    for item in [btnAdd, btnRed, btnRem, btnRan]:
+        item.config(state=tk.NORMAL)
     functionDisplay()
 
 
 ##functions that choose the type of media you will be browsing
-def functionChooseAnime():
+def functionChooseAnime(e = 1):
     lblCatR.config(text="Animes")
-    btnAdd.config(state=tk.NORMAL)
-    btnRed.config(state=tk.NORMAL)
-    btnRem.config(state=tk.NORMAL)
-    btnRan.config(state=tk.NORMAL)
+    for item in [btnAdd, btnRed, btnRem, btnRan]:
+        item.config(state=tk.NORMAL)
     functionDisplay()
 
 
 ##functions that choose the type of media you will be browsing
-def functionChooseShow():
+def functionChooseShow(e = 1):
     lblCatR.config(text="Shows")
-    btnAdd.config(state=tk.NORMAL)
-    btnRed.config(state=tk.NORMAL)
-    btnRem.config(state=tk.NORMAL)
-    btnRan.config(state=tk.NORMAL)
+    for item in [btnAdd, btnRed, btnRem, btnRan]:
+        item.config(state=tk.NORMAL)
     functionDisplay()
 
 
 ##functions that choose the type of media you will be browsing
-def functionChooseBook():
+def functionChooseBook(e = 1):
     lblCatR.config(text="Books")
-    btnAdd.config(state=tk.NORMAL)
-    btnRed.config(state=tk.NORMAL)
-    btnRem.config(state=tk.NORMAL)
-    btnRan.config(state=tk.NORMAL)
+    for item in [btnAdd, btnRed, btnRem, btnRan]:
+        item.config(state=tk.NORMAL)
     functionDisplay()
 
 
@@ -129,7 +89,7 @@ def functionDisplay():
 
 
 ##function that lets you add a movie you want to watch
-def functionAdd():
+def functionAdd(e = 1):
     fileName = lblCatR["text"]
     strOutput = ""
     strOutput += fileName + "\n"
@@ -243,12 +203,12 @@ def functionRandom():
     output = listItems[intRandom]
     pyperclip.copy(output)
     if "Show" in fileName or "Movie" in fileName:
-        webbrowser.open("https://lookmovie.io/", new=1)
+        webbrowser.open("https://soap2day.ac/", new=1)
     elif "Anime" in fileName:
         webbrowser.open("https://9anime.se/", new=1)
     lblExtra.config(text=output)
 
-
+##function that removes items from the associated list
 def functionRemove():
     # file input
     fileName = lblCatR["text"]
@@ -329,7 +289,7 @@ def functionStatistics():
 
 
 ##function that displays to you the titles that you have completed thus far
-def functionFinished():
+def functionFinished(e = 1):
     f = open("dependencies/" + "Finished.txt", "rt")
     lboDisplay.pack()
     lblDisplay.pack_forget()
@@ -463,44 +423,12 @@ def functionColour():
     if ((colour1 in colViable) and (colour2 in colViable)) or ((m) and (n)):
         for wid in [lblCat, lblAll, lblSettings, lblAct, lblCatR]:
             wid.config(bg=colour1)
-        for wid in [
-            btnMov,
-            btnAni,
-            btnSho,
-            btnBoo,
-            btnSta,
-            btnFin,
-            btnExp,
-            btnBar,
-            btnQui,
-            btnColor,
-            btnAdd,
-            btnRed,
-            btnRan,
-            lblDisplay,
-            lblExtra,
-        ]:
+        for wid in [btnMov,btnAni,btnSho,btnBoo,btnSta,btnFin,btnExp,btnBar,btnQui,btnColor,btnAdd,btnRed,btnRan,lblDisplay,lblExtra]:
             wid.config(bg=colour2)
     elif colour1 == "default" or colour2 == "default":
         for wid in [lblCat, lblAll, lblSettings, lblAct, lblCatR]:
             wid.config(bg="#A265CC")
-        for wid in [
-            btnMov,
-            btnAni,
-            btnSho,
-            btnBoo,
-            btnSta,
-            btnFin,
-            btnExp,
-            btnBar,
-            btnQui,
-            btnColor,
-            btnAdd,
-            btnRed,
-            btnRan,
-            lblDisplay,
-            lblExtra,
-        ]:
+        for wid in [btnMov,btnAni,btnSho,btnBoo,btnSta,btnFin,btnExp,btnBar,btnQui,btnColor,btnAdd,btnRed,btnRan,lblDisplay,lblExtra]:
             wid.config(bg="#BC65CC")
     f = open("dependencies/" + "dependencies/" + "Settings.txt", "wt")
     f.write(colour)
@@ -560,65 +488,46 @@ left frame creation, contains
 frmLeft = tk.Frame(master=root, relief="raised", borderwidth=5, bg="#B298C4")
 frmLeft.pack(fill=tk.BOTH, side=tk.LEFT)
 ##categories
-lblCat = tk.Label(
-    frmLeft, text="Categories", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold")
-)
+lblCat = tk.Label(frmLeft, text="Categories", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold"))
 lblCat.grid(row=0, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 ###button for selecting movies
-btnMov = tk.Button(
-    frmLeft, text="Movie", bg="#BC65CC", fg="white", command=functionChooseMovie
-)
+btnMov = tk.Button(frmLeft, text="Movie", bg="#BC65CC", fg="white", command=functionChooseMovie)
 btnMov.grid(row=1, column=0, pady=5, padx=5, sticky="nesw")
+root.bind("<m>", functionChooseMovie)
 ###button for selecting animes
-btnAni = tk.Button(
-    frmLeft, text="Anime", bg="#BC65CC", fg="white", command=functionChooseAnime
-)
+btnAni = tk.Button(frmLeft, text="Anime", bg="#BC65CC", fg="white", command=functionChooseAnime)
 btnAni.grid(row=2, column=0, pady=5, padx=5, sticky="nesw")
+root.bind("<a>", functionChooseAnime)
 ###button for selecting shows
-btnSho = tk.Button(
-    frmLeft, text="Show", bg="#BC65CC", fg="white", command=functionChooseShow
-)
+btnSho = tk.Button(frmLeft, text="Show", bg="#BC65CC", fg="white", command=functionChooseShow)
 btnSho.grid(row=3, column=0, pady=5, padx=5, sticky="nesw")
+root.bind("<s>", functionChooseShow)
 ###button for selecting books
-btnBoo = tk.Button(
-    frmLeft, text="Book", bg="#BC65CC", fg="white", command=functionChooseBook
-)
+btnBoo = tk.Button(frmLeft, text="Book", bg="#BC65CC", fg="white", command=functionChooseBook)
 btnBoo.grid(row=4, column=0, pady=5, padx=5, sticky="nesw")
+root.bind("<b>", functionChooseBook)
 
 ##for all
-lblAll = tk.Label(
-    frmLeft, text="For All", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold")
-)
+lblAll = tk.Label(frmLeft, text="For All", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold"))
 lblAll.grid(row=5, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 ###button for numerical statistics
-btnSta = tk.Button(
-    frmLeft, text="Statistics", bg="#BC65CC", fg="white", command=functionStatistics
-)
+btnSta = tk.Button(frmLeft, text="Statistics", bg="#BC65CC", fg="white", command=functionStatistics)
 btnSta.grid(row=6, column=0, pady=5, padx=5, sticky="nesw")
 ###button to display finished media
-btnFin = tk.Button(
-    frmLeft, text="Finished", bg="#BC65CC", fg="white", command=functionFinished
-)
+btnFin = tk.Button(frmLeft, text="Finished", bg="#BC65CC", fg="white", command=functionFinished)
 btnFin.grid(row=7, column=0, pady=5, padx=5, sticky="nesw")
+root.bind("<f>", functionFinished)
 ###button to email Entertainment List to self provided with email password
-btnEma = tk.Button(
-    frmLeft, text="Email", bg="#BC65CC", fg="white", command=functionEmail
-)
+btnEma = tk.Button(frmLeft, text="Email", bg="#BC65CC", fg="white", command=functionEmail)
 btnEma.grid(row=8, column=0, pady=5, padx=5, sticky="nesw")
 ###button to export Entertainment List into excel
-btnExp = tk.Button(
-    frmLeft, text="Export Excel", bg="#BC65CC", fg="white", command=functionExport
-)
+btnExp = tk.Button(frmLeft, text="Export Excel", bg="#BC65CC", fg="white", command=functionExport)
 btnExp.grid(row=9, column=0, pady=5, padx=5, sticky="nesw")
 ###button to display bar graph of finished media
-btnBar = tk.Button(
-    frmLeft, text="Figure - Bar", bg="#BC65CC", fg="white", command=functionBar
-)
+btnBar = tk.Button(frmLeft, text="Figure - Bar", bg="#BC65CC", fg="white", command=functionBar)
 btnBar.grid(row=10, column=0, pady=5, padx=5, sticky="nsew")
 ###button to display line graph of finished media
-btnLine = tk.Button(
-    frmLeft, text="Figure - Line", bg="#BC65CC", fg="white", command=functionLine
-)
+btnLine = tk.Button(frmLeft, text="Figure - Line", bg="#BC65CC", fg="white", command=functionLine)
 btnLine.grid(row=11, column=0, pady=5, padx=5, sticky="nsew")
 ###button to exit program
 btnQui = tk.Button(frmLeft, text="Quit", bg="#BC65CC", fg="white", command=root.destroy)
@@ -638,36 +547,25 @@ middle frame creation, contains:
 frmMiddle = tk.Frame(master=root, relief="raised", borderwidth=5, bg="#B298C4")
 frmMiddle.pack(fill=tk.BOTH, side=tk.LEFT)
 ###labels for actions
-lblAct = tk.Label(
-    frmMiddle, text="Actions", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold")
-)
+lblAct = tk.Label(frmMiddle, text="Actions", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold"))
 lblAct.grid(row=0, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 ###button to add media
 btnAdd = tk.Button(frmMiddle, text="Add", bg="#BC65CC", fg="white", command=functionAdd)
 btnAdd.grid(row=1, column=0, pady=5, padx=5, sticky="nesw")
+root.bind('<Return>', functionAdd)
 ###button to redeem media
-btnRed = tk.Button(
-    frmMiddle, text="Redeem", bg="#BC65CC", fg="white", command=functionRedeem
-)
+btnRed = tk.Button(frmMiddle, text="Redeem", bg="#BC65CC", fg="white", command=functionRedeem)
 btnRed.grid(row=2, column=0, pady=5, padx=5, sticky="nesw")
 ###button to randomize media
-btnRan = tk.Button(
-    frmMiddle, text="Random", bg="#BC65CC", fg="white", command=functionRandom
-)
+btnRan = tk.Button(frmMiddle, text="Random", bg="#BC65CC", fg="white", command=functionRandom)
 btnRan.grid(row=3, column=0, pady=5, padx=5, sticky="nesw")
-btnRem = tk.Button(
-    frmMiddle, text="Remove", bg="#BC65CC", fg="white", command=functionRemove
-)
+btnRem = tk.Button(frmMiddle, text="Remove", bg="#BC65CC", fg="white", command=functionRemove)
 btnRem.grid(row=4, column=0, pady=5, padx=5, sticky="news")
 ##title for the settings
-lblSettings = tk.Label(
-    frmMiddle, text="Settings", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold")
-)
+lblSettings = tk.Label(frmMiddle, text="Settings", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold"))
 lblSettings.grid(row=5, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 ###button to change teh default colours of the program when passed either basic colour strings or hexadecimal colours
-btnColor = tk.Button(
-    frmMiddle, text="Change Colour", bg="#BC65CC", fg="white", command=functionColour
-)
+btnColor = tk.Button(frmMiddle, text="Change Colour", bg="#BC65CC", fg="white", command=functionColour)
 btnColor.grid(row=6, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 
 
@@ -680,17 +578,13 @@ btnColor.grid(row=6, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 frmRight = tk.Frame(root, relief="raised", borderwidth=5, bg="#B298C4")
 frmRight.pack(fill=tk.BOTH, side=tk.LEFT, expand=True)
 ###label showing type of media
-lblCatR = tk.Label(
-    frmRight, text="Movies", bg="#A265CC", fg="white", font=("Helvetica", 14, "bold")
-)
+lblCatR = tk.Label(frmRight, text="Movies", bg="#A265CC", fg="white", font=("Helvetica", 14, "bold"))
 lblCatR.pack(fill=tk.X, side=tk.TOP)
 ###label for main displaying
 frmDisplay = tk.Label(frmRight, relief="sunken", borderwidth=5, bg="#B298C4")
 frmDisplay.pack(fill=tk.BOTH, expand=True, side=tk.TOP)
 ###main label for display
-lblDisplay = tk.Label(
-    frmDisplay, text="There is nothing to display", height=25, width=50
-)
+lblDisplay = tk.Label(frmDisplay, text="There is nothing to display", height=25, width=50)
 lblDisplay.pack(side=tk.LEFT, expand=True, fill=tk.BOTH, pady=10, padx=10)
 lblDisplay.pack_forget()
 ###vertical scrollbar for display
@@ -709,6 +603,7 @@ lblExtra.pack(fill=tk.X, side=tk.TOP)
 
 ##settings
 functionSettings()
+functionChooseMovie()
 
 # required mainloop
 root.mainloop()
