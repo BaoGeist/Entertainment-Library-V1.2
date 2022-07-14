@@ -39,34 +39,49 @@ def functionSettings():
 
 ##functions that choose the type of media you will be browsing
 def functionChooseMovie(e = 1):
-    lblCatR.config(text="Movies")
-    for item in [btnAdd, btnRed, btnRem, btnRan]:
-        item.config(state=tk.NORMAL)
-    functionDisplay()
-
+    widget = root.focus_get()
+    if(widget != entEnter):
+        lblCatR.config(text="Movies")
+        for item in [btnAdd, btnRed, btnRem, btnRan]:
+            item.config(state=tk.NORMAL)
+        functionDisplay()
+    else:
+        print('Change active widget away from entry box by pressing the "Finished" main display')
 
 ##functions that choose the type of media you will be browsing
 def functionChooseAnime(e = 1):
-    lblCatR.config(text="Animes")
-    for item in [btnAdd, btnRed, btnRem, btnRan]:
-        item.config(state=tk.NORMAL)
-    functionDisplay()
+    widget = root.focus_get()
+    if(widget != entEnter):
+        lblCatR.config(text="Animes")
+        for item in [btnAdd, btnRed, btnRem, btnRan]:
+            item.config(state=tk.NORMAL)
+        functionDisplay()
+    else:
+        print('Change active widget away from entry box by pressing the "Finished" main display')
 
 
 ##functions that choose the type of media you will be browsing
 def functionChooseShow(e = 1):
-    lblCatR.config(text="Shows")
-    for item in [btnAdd, btnRed, btnRem, btnRan]:
-        item.config(state=tk.NORMAL)
-    functionDisplay()
+    widget = root.focus_get()
+    if(widget != entEnter):
+        lblCatR.config(text="Shows")
+        for item in [btnAdd, btnRed, btnRem, btnRan]:
+            item.config(state=tk.NORMAL)
+        functionDisplay()
+    else:
+        print('Change active widget away from entry box by pressing the "Finished" main display')
 
 
 ##functions that choose the type of media you will be browsing
 def functionChooseBook(e = 1):
-    lblCatR.config(text="Books")
-    for item in [btnAdd, btnRed, btnRem, btnRan]:
-        item.config(state=tk.NORMAL)
-    functionDisplay()
+    widget = root.focus_get()
+    if(widget != entEnter):
+        lblCatR.config(text="Books")
+        for item in [btnAdd, btnRed, btnRem, btnRan]:
+            item.config(state=tk.NORMAL)
+        functionDisplay()
+    else:
+        print('Change active widget away from entry box by pressing the "Finished" main display')
 
 
 ##function that displays the movies you currently would like to watch
@@ -493,19 +508,19 @@ lblCat.grid(row=0, column=0, pady=5, padx=5, sticky="nesw", ipady=10)
 ###button for selecting movies
 btnMov = tk.Button(frmLeft, text="Movie", bg="#BC65CC", fg="white", command=functionChooseMovie)
 btnMov.grid(row=1, column=0, pady=5, padx=5, sticky="nesw")
-root.bind("<m>", functionChooseMovie)
+root.bind('<space>m', functionChooseMovie)
 ###button for selecting animes
 btnAni = tk.Button(frmLeft, text="Anime", bg="#BC65CC", fg="white", command=functionChooseAnime)
 btnAni.grid(row=2, column=0, pady=5, padx=5, sticky="nesw")
-root.bind("<a>", functionChooseAnime)
+root.bind("<space>a", functionChooseAnime)
 ###button for selecting shows
 btnSho = tk.Button(frmLeft, text="Show", bg="#BC65CC", fg="white", command=functionChooseShow)
 btnSho.grid(row=3, column=0, pady=5, padx=5, sticky="nesw")
-root.bind("<s>", functionChooseShow)
+root.bind("<space>s", functionChooseShow)
 ###button for selecting books
 btnBoo = tk.Button(frmLeft, text="Book", bg="#BC65CC", fg="white", command=functionChooseBook)
 btnBoo.grid(row=4, column=0, pady=5, padx=5, sticky="nesw")
-root.bind("<b>", functionChooseBook)
+root.bind("<space>b", functionChooseBook)
 
 ##for all
 lblAll = tk.Label(frmLeft, text="For All", bg="#A265CC", fg="white", font=("Helvetica", 12, "bold"))
